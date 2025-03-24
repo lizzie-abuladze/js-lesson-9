@@ -3,7 +3,7 @@
 let fetchDiv = document.getElementById("container");
 let btnLoadMore = document.querySelector(".more");
 let currentPage = 1;
-let nameList = document.querySelector("fNameList");
+let nameList = document.querySelector(".fNameList");
 
 function getFname(page) {
   fetch("https://reqres.in/api/users?page=" + page, {
