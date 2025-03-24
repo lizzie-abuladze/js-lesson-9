@@ -30,14 +30,18 @@ function getFname(page) {
     })
 
     .catch(function (error) {
-      if (error === 404) {
+      if (error == 404) {
         let pError = document.createElement("p");
-        pError.innerText = "Page Not Found";
-        divApi.appendChild(pError);
-      } else {
+        pError.innerText = "page not found";
+        fetchDiv.appendChild(pError);
+      } else if (error == 500) {
         let pError2 = document.createElement("p");
         pError2.innerText = "Server Error";
-        divApi.appendChild(pError2);
+        fetchDiv.appendChild(pError2);
+      } else {
+        let pError3 = document.createElement("p");
+        pError3.innerText = "check your internet connection";
+        fetchDiv.appendChild(pError3)
       }
     });
 }
