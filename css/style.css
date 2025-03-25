@@ -1,0 +1,72 @@
+.fNameList {
+  display: flex;
+  flex-direction: column;
+}
+body {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#container {
+  background-color: #92b192;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px #000000;
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+.fNameList li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 2px solid #f1f1f1;
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.fNameList li:hover {
+  transform: translateX(10px);
+  background-color: #97ffb671;
+}
+.fNameList li img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  border: 3px solid #000000;
+}
+.fNameList li h2 {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 600;
+}
+button {
+  padding: 12px 25px;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: #0f5faa;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+
+button:hover {
+  background-color: #357ab7;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #ddd;
+  color: #aaa;
+  cursor: not-allowed;
+}
