@@ -45,19 +45,29 @@ function getFname(page) {
     })
 
     .catch(function (error) {
+      // if (error == 404) {
+      //   let pError = document.createElement("p");
+      //   pError.innerText = "page not found";
+      //   fetchDiv.appendChild(pError);
+      // } else if (error == 500) {
+      //   let pError2 = document.createElement("p");
+      //   pError2.innerText = "Server Error";
+      //   fetchDiv.appendChild(pError2);
+      // } else {
+      //   let pError3 = document.createElement("p");
+      //   pError3.innerText = "check your internet connection";
+      //   fetchDiv.appendChild(pError3);
+      // }
+
+      let pError = document.createElement("p");
       if (error == 404) {
-        let pError = document.createElement("p");
-        pError.innerText = "page not found";
-        fetchDiv.appendChild(pError);
+        pError.innerText = "Page not found";
       } else if (error == 500) {
-        let pError2 = document.createElement("p");
-        pError2.innerText = "Server Error";
-        fetchDiv.appendChild(pError2);
+        pError.innerText = "Server error";
       } else {
-        let pError3 = document.createElement("p");
-        pError3.innerText = "check your internet connection";
-        fetchDiv.appendChild(pError3);
+        pError.innerText = "Check your internet connection";
       }
+      fetchDiv.appendChild(pError);
     });
 }
 
@@ -92,4 +102,3 @@ function changeBtnStatus() {
     btnLoadMore.disabled = false;
   }
 }
-
